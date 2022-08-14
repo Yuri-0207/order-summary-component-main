@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+  --font: 'Red Hat Display', sans-serif;
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  font-family: var(--font);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Background */
+body {
+  background-color: var(--Pale-blue);
+}
+.images {
+  background: url("./images/pattern-background-desktop.svg") no-repeat center/cover;
+  height: 300px;
+}
+@media (max-width: 275px) {
+  .images {
+    background: url(./images/pattern-background-mobile.svg) no-repeat center/cover;
+  }
+}
+
+/* Card Styling */
+.card {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 20rem;
+  height: 30rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 30px 0 rgba(0, 0, 0, .3);
+
+}
+.main-image img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+/* The Informations in The Card */
+.info-container {
+  margin: 1.5rem 2rem;
+}
+.intro h3 {
+  font-weight: 900;
+  text-align: center;
+  color: var(--Dark-blue);
+}
+.intro p {
+  font-size: .8rem;
+  text-align: center;
+  padding: 1em 0;
+  color: var(--Desaturated-blue);
+}
+
+/* Annual Plan */
+.purchase {
+  background-color: var(--Very-pale-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.purchase img {
+  position: absolute;
+  width: 2rem;
+}
+.purchase p {
+  font-size: .8rem;
+  padding-left: 3rem;
+  color: var(--Desaturated-blue);
+}
+.purchase .annual {
+  color: var(--Dark-blue);
+  font-weight: 700;
+}
+.purchase a {
+  font-size: .8rem;
+  font-weight: 700;
+  color: var(--Bright-blue);
+}
+.purchase a:hover {
+  text-decoration: none;
+  opacity: .8;
+}
+
+/* Buttons Section */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.3rem 0;
+}
+.buttons a {
+  text-decoration: none;
+  text-align: center;
+  font-size: .7rem;
+  font-weight: 900;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: .7rem;
+}
+.proceed {
+  background-color: var(--Bright-blue);
+  color: white;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .5);
+  z-index: 10;
+}
+.proceed:hover {
+  opacity: .8;
+}
+.cancel {
+  background-color: white;
+  color: var(--Desaturated-blue);
+}
+.cancel:hover {
+  color: var(--Dark-blue);
+}
